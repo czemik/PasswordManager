@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "PasswordManager": {
+      "commandName": "Project"
+    },
+    "Profile 2": {
+      "commandName": "Project",
+      "commandLineArgs": "login --username=jani --password=alma"
+    },
+    "Profile 1": {
+      "commandName": "Project",
+      "commandLineArgs": "register --username=jani --password=alma --email=alma@gmail.com --firstname=aka --lastname=banan"
+    }
+  }
+}

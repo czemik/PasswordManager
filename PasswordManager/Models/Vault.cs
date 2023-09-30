@@ -11,7 +11,7 @@ namespace PasswordManager.Models
 {
     internal class Vault
     {
-        public static string VaultCsvPath { get; set; } = "../resources/db/vault.csv";
+        public static string VaultCsvPath { get; set; } = "../../../../resources/db/vault.csv";
 
         [Name("user_id")]
         public string? UserId { get; set; }

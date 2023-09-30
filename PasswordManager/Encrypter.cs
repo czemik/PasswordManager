@@ -1,4 +1,5 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using Cryptography;
+using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,23 +13,23 @@ namespace PasswordManager
 {
     internal class Encrypter
     {
-        string Encrypt(string Key, string Secret)
+        public static string Encrypt(string Key, string Secret)
         {
             using var hashing = SHA256.Create();
             byte[] keyHash = hashing.ComputeHash(Encoding.Unicode.GetBytes(Key));
             string key = Base64UrlEncoder.Encode(keyHash);
             string message = Base64UrlEncoder.Encode(Encoding.Unicode.GetBytes(Secret));
-            return "asd";
+            return Fernet.Encrypt(key, message);
         }
 
-        string Decrypt(string Key, string Secret)
+        public static string Decrypt(string Key, string Secret)
         {
             using var hashing = SHA256.Create();
             byte[] keyHash = hashing.ComputeHash(Encoding.Unicode.GetBytes(Key));
             string key = Base64UrlEncoder.Encode(keyHash);
-            //string encodedSecret = Fernet.Decrypt(key, Secret);
-            //string message = Encoding.Unicode.GetString(Base64UrlEncoder.DecodeBytes(encodedSecret));
-            return "asd";
+            string encodedSecret = Fernet.Decrypt(key, Secret);
+            string message = Encoding.Unicode.GetString(Base64UrlEncoder.DecodeBytes(encodedSecret));
+            return message;
         }
     }
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "MgyJaWyxJwvDC5a7bi/W8ZGlXIDJjuwYfX8Xgfho3B6NM9nOIhFih+YR3DfEQs22YMvya4yziAYlmwFaY/Ldzg==",
+  "dgSpecHash": "7Sx5J8k6gVIjlyHSc2JH9JlD30qS5D4dIzn63/6m1vODsCDmJAybjovMWbK/THfVSWm4KzhPy5SGa5RtREm1mQ==",
   "success": true,
   "projectFilePath": "D:\\Egyetem\\Alkfejl2\\1. project\\PasswordManager\\PasswordManager\\PasswordManager.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\potib\\.nuget\\packages\\cryptography.fernet\\1.1.1\\cryptography.fernet.1.1.1.nupkg.sha512",
     "C:\\Users\\potib\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\potib\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.0.2\\microsoft.identitymodel.abstractions.7.0.2.nupkg.sha512",
     "C:\\Users\\potib\\.nuget\\packages\\microsoft.identitymodel.logging\\7.0.2\\microsoft.identitymodel.logging.7.0.2.nupkg.sha512",
