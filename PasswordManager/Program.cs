@@ -189,7 +189,7 @@ class Program
                 Console.WriteLine("User registered!");
             }
         }
-        catch (FileNotFoundException ex)
+        catch (FileNotFoundException)
         {
             Console.WriteLine("Your workdir is not set correctly!");
         }
@@ -232,7 +232,7 @@ class Program
                 Console.WriteLine("Username and password didn't match");
             }
         }
-        catch (FileNotFoundException ex)
+        catch (FileNotFoundException)
         {
             Console.WriteLine("Your workdir is not set correctly!");
         }
@@ -261,7 +261,7 @@ class Program
                 }
             }
         }
-        catch (FileNotFoundException ex)
+        catch (FileNotFoundException)
         {
             Console.WriteLine("Your workdir is not set correctly!");
         }
@@ -312,7 +312,7 @@ class Program
                 Console.WriteLine("New record added to vault!");
             }
         }
-        catch (FileNotFoundException ex)
+        catch (FileNotFoundException)
         {
             Console.WriteLine("Your workdir is not set correctly!");
         }
