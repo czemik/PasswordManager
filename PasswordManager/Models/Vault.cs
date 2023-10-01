@@ -31,7 +31,7 @@ namespace PasswordManager.Models
             get
             {
                 if (User.UserCsvPath == null) return null;
-                using StreamReader reader = new(VaultCsvPath);
+                using StreamReader reader = new(User.UserCsvPath);
                 using CsvReader csv = new(
                     reader, CultureInfo.InvariantCulture);
                 return csv.GetRecords<User>()

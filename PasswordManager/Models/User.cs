@@ -9,7 +9,7 @@ namespace PasswordManager.Models
 {
     internal class User
     {
-        public static string UserCsvPath { get; set; } = "../../../../resources/db/user.csv";
+        public static string UserCsvPath { get; set; } = "user.csv";
 
         public static User? loggedInUser { get; set; }
 
