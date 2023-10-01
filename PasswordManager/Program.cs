@@ -191,7 +191,13 @@ class Program
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine("Your workdir is not set correctly!");
+            WrongWorkDir();
+            return;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return;
         }
     }
 
@@ -234,7 +240,13 @@ class Program
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine("Your workdir is not set correctly!");
+            WrongWorkDir();
+            return;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return;
         }
     }
 
@@ -263,7 +275,13 @@ class Program
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine("Your workdir is not set correctly!");
+            WrongWorkDir();
+            return;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return;
         }
     }
 
@@ -314,8 +332,19 @@ class Program
         }
         catch (FileNotFoundException)
         {
-            Console.WriteLine("Your workdir is not set correctly!");
+            WrongWorkDir();
+            return;
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return;
+        }
+    }
+
+    private static void WrongWorkDir()
+    {
+        Console.WriteLine($"Your workdir is not set correctly! '{Config.Instance.WorkDir}'");
     }
 
 }
